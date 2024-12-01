@@ -1,3 +1,3 @@
-#NVIM CONFIG
+# NVIM CONFIG
 
 ![Preview](nvim-configuration.png)
