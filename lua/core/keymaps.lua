@@ -6,10 +6,11 @@ vim.o.number = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
-vim.opt.guifont = "SF Mono:h12"
+--vim.opt.guifont = "SF Mono:h12"
+vim.opt.guifont = "JetBrains Mono:h12"
 
 vim.g.catppuccin_flavout = "mocha"
-
+--vim.g.catppuccin_flavour = "latte"
 -- This keybinding uses jk as the escape key to exit a mode
 vim.keymap.set("i", "jk", "<ESC>", {noremap = true})
 
