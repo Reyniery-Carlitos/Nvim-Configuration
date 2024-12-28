@@ -1,16 +1,16 @@
 local lspconfig_status, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status then
-    return
+  return
 end
 
 local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not cmp_nvim_lsp_status then
-    return
+  return
 end
 
 local typescript_setup, typescript = pcall(require, "typescript")
 if not typescript_setup then
-    return
+  return
 end
 
 local keymap = vim.keymap
@@ -31,7 +31,7 @@ keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 keymap.set("n", "K", "<leader>LSoutlineToggle<CR>", opts)
 
 if client.name == "ts_ls" then
-    keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
+  keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
 end
 
 end
@@ -41,30 +41,30 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local async = require "plenary.async"
 
 lspconfig.html.setup({
-    capabilities = capabilities,
-    on_attach = on_attach
+  capabilities = capabilities,
+  on_attach = on_attach
 })
 
 typescript.setup({
-    server = {
-        capabilities = capabilities,
-        on_attach = on_attach
-    }
+  server = {
+    capabilities = capabilities,
+    on_attach = on_attach
+  }
 })
 
 lspconfig.tailwindcss.setup({
-    capabilities = capabilities,
-    on_attach = on_attach
+  capabilities = capabilities,
+  on_attach = on_attach
 })
 
 lspconfig.gopls.setup({
-    capabilities = capabilities,
-    on_attach = on_attach
+  capabilities = capabilities,
+  on_attach = on_attach
 })
 
 lspconfig.rust_analyzer.setup({
-    server = {
-        capabilities = capabilities,
-        on_attach = on_attach
-    }
+  server = {
+    capabilities = capabilities,
+      on_attach = on_attach
+  }
 })

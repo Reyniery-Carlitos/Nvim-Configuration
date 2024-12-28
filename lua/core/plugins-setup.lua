@@ -16,9 +16,9 @@ return require('packer').startup(function(use)
   -- insert packer plugins between this lines
 
   -- Supermaven - IA completion
-use {
-  "supermaven-inc/supermaven-nvim"
- }
+  use {
+    "supermaven-inc/supermaven-nvim"
+   }
 
   -- themes
   --use "folke/tokyonight.nvim"
@@ -51,8 +51,9 @@ use {
   use "rafamadriz/friendly-snippets"
   use "saadparwaiz1/cmp_luasnip"
 
-  -- formatter
-  
+  -- formatter 
+  use "stevearc/conform.nvim"
+
   -- lsp -> language server protocols
   use {
     "williamboman/mason.nvim",
@@ -63,7 +64,7 @@ use {
     "onsails/lspkind.nvim"
   }
 
-use "nvim-lua/plenary.nvim"
+  use "nvim-lua/plenary.nvim"
 
   -- telescope setup, fuzzy finder
   use {

@@ -2,7 +2,7 @@ require'nvim-treesitter.configs'.setup {
 -- A list of parser names, or "all"
   ensure_installed = { "c", "lua", "vim", "typescript", "javascript", "sql", "php", "python", "vue", "html", "css" },
   autotag = {
-      enable = true,
+    enable = true,
   },
   -- Install parsers sync
   sync_install = false,
